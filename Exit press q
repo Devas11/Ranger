@@ -1,0 +1,46 @@
+import java.io.*;
+ 
+class PrintIt implements Runnable{
+     
+    static BufferedReader in ; 
+    static boolean quit=false;
+     
+    public void run(){
+        String msg = null;
+         
+        while(true){
+            try{
+            msg=in.readLine();
+            }catch(IOException e){
+                e.printStackTrace();
+                }
+             
+            if(msg.equals("Q")) {quit=true;break;}
+        }
+    }
+     
+     
+    public static void main(String args[]) {
+     
+        in=new BufferedReader(new InputStreamReader(System.in));
+         
+        Thread t1=new Thread(new PrintIt());
+        t1.start();
+         
+        System.out.println("press Q THEN ENTER to terminate");
+         
+        while(true){
+            try{
+            t1.sleep(10);     
+            }catch(InterruptedException e){
+            e.printStackTrace();
+            }
+         
+            if(quit==true) break;
+            System.out.println("hello buddy");
+         
+        }
+    }
+}
+
+    
