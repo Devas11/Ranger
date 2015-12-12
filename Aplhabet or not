@@ -1,0 +1,29 @@
+public class Alphabet {
+ 
+   public static void main(String[] args) {
+       
+ String characters = "q1w2E3r4T5y 9$0%a-s^d";
+ 
+
+ int length = characters.length();
+ 
+ 
+ for(int i = 0; i < length; i++) {
+          
+    char character = characters.charAt(i);
+         
+    
+    if(Character.isLetter(character)) {
+  System.out.println("Given character : " + characters.charAt(i) + " is a letter");
+    }
+    else {
+  System.out.println("Given character : " + characters.charAt(i) + " is not a letter");
+    }
+ }
+   }
+ 
+ 
+}
+
+    
+
