@@ -1,0 +1,3 @@
+str1="Hello";
+Str2="Hello World";
+while( (*str1)++ == (*str2)++ );
