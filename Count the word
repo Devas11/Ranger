@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+public class Countword
+{  
+    public static void main(String[]args)     
+    { 
+            Scanner in= new Scanner(System.in);           
+
+            System.out.println("enter the string ");
+            String input = in.next();
+
+          
+
+            int words = 0;
+           
+
+            while(in.hasNext())
+            {
+                in.next();
+                words++;
+            }
+
+          
+            System.out.println("Number of words: " + words);
+           
+    }
+}
